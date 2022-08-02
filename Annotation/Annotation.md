@@ -5,6 +5,7 @@
 #
 ### @ResponseBody
 * Html의 본문(body)이 그대로 노출
+  * 다시 말해 View가 아닌 Text가 전달됨
 * 기본적인 Default는 Json으로 데이터를 만들어서 HTTP 응답에 반환하도록 설정
   * 아래 경우엔 hello 객체가 Json으로 응답
   ``` java
