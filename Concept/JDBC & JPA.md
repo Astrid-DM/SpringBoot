@@ -1,5 +1,5 @@
 ### JDBC
-* JDBC(Java Database Connectivity)는 DB에 접근하 수 있도록 `java`에서 제공하는 `API`
+* `JDBC(Java Database Connectivity)`는 DB에 접근하 수 있도록 `java`에서 제공하는 `API`
 * 2000년대 초반에 많이 쓰임. 현재는 잘 안쓰이는데, 이유는 다음고 같다.
 ```java
     @Override
@@ -27,9 +27,8 @@
             close(conn, pstmt, rs);
         } 
     }
-
 ```
-* `findById` 하나 구현하는데도 코드가 이렇게나 길어진다. 이를 개선하기 위해 등장한것이 Spring JDBC Template이다.
+* `findById` 하나 구현하는데도 코드가 이렇게나 길어진다. 이를 개선하기 위해 등장한것이 `Spring JDBC Template`이다.
 
 ### JDBC Template
 ``` java 
@@ -53,9 +52,9 @@
         return Optional.ofNullable(member);
 }
 ```
-* JPA(Java Persistence API -> Jakarta Persistence API : 명칭 변경)
+* `JPA`(Java Persistence API -> Jakarta Persistence API : 명칭 변경)
 * Java의 ORM 표준
-  * 객체와 DB 사이를 연결해주는 ORM(Object Relational Mapping)
+  * 객체와 DB 사이를 연결해주는 `ORM(Object Relational Mapping)`
   <img width="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcVpdyx%2FbtrduVd3PbP%2FKR8xkT8seoKxrHKdiezGx1%2Fimg.png"/>
   * 컴퓨터는 똑똑하지만 사람이 말할때 말하지 않아도 '눈치'를 통해 행동하는 것 만큼 똑똑하지 않다. 때문에 DB의 테이블에 있는 정보를 Java로 구현한 객체에 맵핑할 때, 자동으로 이루어지지 않고 ORM을 통해 이루어진다.
   * ORM이 없었다면 Select로 얻어낸 값들을 일일이 맵핑했어야 할 것이다.
@@ -65,6 +64,14 @@
 
 ### Spring DATA JPA
 <img width="40%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKNNL0%2Fbtrdr3Rbluo%2FYGi3SGnLwMZuWKnINIOHHk%2Fimg.png"/></img>
+``` java
+    // 인터페이스가 인터페이스를 상속받을때는 extends
+    public interface SpringDataJpaMemberRepository extends JpaRepository<Member, Long>, MemberRepository {
+        @Override
+        Optional<Member> findByName(String name);
+    }
+
+```
 * Spring에서 Hibernate를 보다 간편하게 사용할 수 있도록 추상객체를 한 번 더 감싸서 만든것
 * EntityManager에 접근하지 않고도 보다 쉽게 객체에 접근하여 DB의 데이터를 활용할 수 있다.
   
