@@ -38,10 +38,10 @@
         return result.stream().findAny();
     }
 ```
-* 위에 언급된 plain JDBC에 비해 코드가 훨씬 간결해졌다.
-* Spring JDBC가 Connection의 열고 닫기, 예외 처리와 트랜젝션을 모두 처리해줘서 개발자는 datasource 설정, SQL 작성, 결과 처리 수행에만 집중 가능
-* 코드가 간결해졌음에도 SQL Query문을 작성해야 하기 때문에 객체 지향 개발이 어렵다는 단점이 존재
-  * 이를 개선하기 위해 JPA 등장
+* 위에 언급된 `plain JDBC`에 비해 코드가 훨씬 간결해졌다.
+* `Spring JDBC`가 `Connection`의 열고 닫기, 예외 처리와 트랜젝션을 모두 처리해줘서 개발자는 datasource 설정, SQL 작성, 결과 처리 수행에만 집중 가능
+* 코드가 간결해졌음에도 `SQL Query`문을 작성해야 하기 때문에 객체 지향 개발이 어렵다는 단점이 존재
+  * 이를 개선하기 위해 `JPA` 등장
   
 ### JPA
 ```java
@@ -72,7 +72,7 @@
     }
 
 ```
-* Spring에서 Hibernate를 보다 간편하게 사용할 수 있도록 추상객체를 한 번 더 감싸서 만든것
+* Spring에서 `Hibernate`를 보다 간편하게 사용할 수 있도록 추상객체를 한 번 더 감싸서 만든것
 * EntityManager에 접근하지 않고도 보다 쉽게 객체에 접근하여 DB의 데이터를 활용할 수 있다.
   
 ### 정리
