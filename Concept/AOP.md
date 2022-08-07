@@ -8,4 +8,4 @@
 ## 실행 예시 - 메소드 호출 시간 측정
 
 ## 실행 결과
-![Res](/Desktop/Res.png)
+![Res](./Desktop/Res.png)
