@@ -6,6 +6,27 @@
 
 
 ## 실행 예시 - 메소드 호출 시간 측정
+``` java
+// TimeTraceAop
+@Component // Bean으로 등록
+@Aspect // AOP 선언
+public class TimeTraceAop {
+
+    @Around("execution(* com.example.hellospring..*(..))") // 현재 실행중인 패키지의 명을 정확히 입력
+    public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
+        long start = System.currentTimeMillis();
+        System.out.println("START: " + joinPoint.toString());
+        try {
+            return joinPoint.proceed();
+        } finally {
+            long finish = System.currentTimeMillis();
+            long timeMs = finish - start;
+            System.out.println("END: " + joinPoint.toString()+ " " + timeMs +"ms");
+        }
+    }
+}
+
+```
 
 ## 실행 결과
 ``` java
