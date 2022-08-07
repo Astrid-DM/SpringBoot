@@ -8,4 +8,11 @@
 ## 실행 예시 - 메소드 호출 시간 측정
 
 ## 실행 결과
-![Res](./Desktop/Res.png)
+``` shell
+2022-08-07 20:22:36.173  INFO 3548 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-07 20:22:36.177  INFO 3548 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+START: execution(MemberService com.example.hellospring.SpringConfig.memberService())
+END: execution(MemberService com.example.hellospring.SpringConfig.memberService()) 6ms
+2022-08-07 20:22:36.447  WARN 3548 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-07 20:22:36.556  INFO 3548 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+```
