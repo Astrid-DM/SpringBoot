@@ -7,7 +7,7 @@
 
 ## 실행 예시 - 메소드 호출 시간 측정
 ``` java
-// TimeTraceAop
+// TimeTraceAop.java
 @Component // Bean으로 등록
 @Aspect // AOP 선언
 public class TimeTraceAop {
