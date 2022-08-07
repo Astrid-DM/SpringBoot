@@ -60,7 +60,7 @@
   * ORM이 없었다면 Select로 얻어낸 값들을 일일이 맵핑했어야 할 것이다.
 * JPA는 Java의 ORM 표준으로 채택되어있다.
 * ORM이 포괄적인 개념이라면 JPA는 구체적으로 기능을 정의한 스펙이라고 볼 수 있다.
-* JPA의 ORM Implementation의 예시로 Hibernate가 있다. Hibernate는 JPA Provider의 표준(기본)이다.
+* JPA의 `ORM Implementation`의 예시로 `Hibernate`가 있다. `Hibernate`는 `JPA Provider`의 표준(기본)이다.
 
 ### Spring DATA JPA
 <img width="40%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKNNL0%2Fbtrdr3Rbluo%2FYGi3SGnLwMZuWKnINIOHHk%2Fimg.png"/></img>
