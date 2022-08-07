@@ -8,4 +8,4 @@
 ## 실행 예시 - 메소드 호출 시간 측정
 
 ## 실행 결과
-![캡처](/Desktop/Screen Shot 2022-08-07 at 8.25.17 PM.png)
+![Res](/Desktop/Res.png)
