@@ -64,12 +64,12 @@
 * JPA의 ORM Implementation의 예시로 Hibernate가 있다. Hibernate는 JPA Provider의 표준(기본)이다.
 
 ### Spring DATA JPA
-<img width="60%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKNNL0%2Fbtrdr3Rbluo%2FYGi3SGnLwMZuWKnINIOHHk%2Fimg.png"/>
+<img width="60%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKNNL0%2Fbtrdr3Rbluo%2FYGi3SGnLwMZuWKnINIOHHk%2Fimg.png"/></img>
 * Spring에서 Hibernate를 보다 간편하게 사용할 수 있도록 추상객체를 한 번 더 감싸서 만든것
 * EntityManager에 접근하지 않고도 보다 쉽게 객체에 접근하여 DB의 데이터를 활용할 수 있다.
   
 ### 정리
-<img width="60%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlfTql%2FbtrdwT1mWG5%2FNFTQeyb6ARWsTJuL7O9ecK%2Fimg.png"/>
+<img width="60%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlfTql%2FbtrdwT1mWG5%2FNFTQeyb6ARWsTJuL7O9ecK%2Fimg.png"/></img>
 * `JDBC(Java Database Connectivity)`는 `DB`에 접근할 수 있도록 `JAVA`에서 제공하는 `API`
 * `ORM`은 어플리케이션 내부의 객체가 `DB`의 테이블에 쉽게 맵핑될 수 있도록 연결
 * `JAVA`에서 `ORM`의 표준 스펙으로 `JPA`를 인터페이스로 정의하여 제공
