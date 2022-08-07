@@ -55,7 +55,7 @@
 * `JPA`(Java Persistence API -> Jakarta Persistence API : 명칭 변경)
 * Java의 ORM 표준
   * 객체와 DB 사이를 연결해주는 `ORM(Object Relational Mapping)`
-  <img width="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcVpdyx%2FbtrduVd3PbP%2FKR8xkT8seoKxrHKdiezGx1%2Fimg.png"/>
+  <img width="80%" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcVpdyx%2FbtrduVd3PbP%2FKR8xkT8seoKxrHKdiezGx1%2Fimg.png"/></img>
   * 컴퓨터는 똑똑하지만 사람이 말할때 말하지 않아도 '눈치'를 통해 행동하는 것 만큼 똑똑하지 않다. 때문에 DB의 테이블에 있는 정보를 Java로 구현한 객체에 맵핑할 때, 자동으로 이루어지지 않고 ORM을 통해 이루어진다.
   * ORM이 없었다면 Select로 얻어낸 값들을 일일이 맵핑했어야 할 것이다.
 * JPA는 Java의 ORM 표준으로 채택되어있다.
