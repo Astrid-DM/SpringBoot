@@ -8,7 +8,7 @@
 ## 실행 예시 - 메소드 호출 시간 측정
 
 ## 실행 결과
-``` shell
+``` java
 2022-08-07 20:22:36.173  INFO 3548 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-08-07 20:22:36.177  INFO 3548 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
 START: execution(MemberService com.example.hellospring.SpringConfig.memberService())
