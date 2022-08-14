@@ -11,6 +11,8 @@
 ### 1. SRP (Single Responsibility Principle)
 * 단일 책임의 원칙
   * 한 클래스는 하나의 책임만을 가진다.
+
+[ 예시 1 ]
 ``` java
 public class AppConfig {
       public MemberService memberService() {
@@ -23,9 +25,10 @@ public class AppConfig {
 } }
 ```
 * 위 코드에서 `AppConfig`는 구현 객체를 생성하고 연결하는 책임을 갖고있음
-* 클라이언트 객체는 실행하는 책임만 담당 
+* 클라이언트 객체는 실행하는 책임만 담당
 
-[ 예시 1 ]
+
+[ 예시 2 ]
 ``` c++
 class Unit(){
     private String name;
@@ -45,8 +48,6 @@ class Unit(){
 ```
 * 위의 예시에서는 몬스터가 추가되면 if-else가 끝없이 늘어날 수 있음
 * 더 나아가 클래스 내부의 함수가 바뀔 경우, 또 다른 클래스에도 영향을 끼칠 수 있음  
-
-[ 예시 2 ]
 ``` c++
 class 슬라임 extends Unit{
 	public void move(){
