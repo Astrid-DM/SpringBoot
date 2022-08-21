@@ -21,9 +21,9 @@
         return new MemoryMemberRepository();
     }
         
-    ... (생략)
-}
-    ```
+    // 생략
+   }
+   ```
 ### 사용 코드 예시
 ``` java
 public class MemberApp {
