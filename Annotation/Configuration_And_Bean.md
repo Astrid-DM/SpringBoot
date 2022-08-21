@@ -62,3 +62,4 @@ public class MemberApp {
 ### 스프링의 장점
 * `AppConfig`를 활용한 java 코드만으로도 SRP, OCP, DIP를 만족할 수 있지만, 스프링은 이에 더해 싱글톤 패턴 등
   다양한 기능들이 있다.
+* 스프링 컨테이너 내부에서 생성된 `Bean` 객체는 모두 `Singleton` 패턴으로 관리되어진다.
