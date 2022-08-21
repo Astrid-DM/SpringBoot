@@ -7,11 +7,11 @@
     ```
 * `@bean` 적용
     * [코드]
-    ``` java
-    @Configuration
-    public class AppConfig {
+   ``` java
+   @Configuration
+   public class AppConfig {
 
-    @Bean // 기존 코드에는 없었던 어노테이션
+    @Bean
     public MemberService memberService() {
         return new MemberServiceImpl(memberRepository());
     }
@@ -20,8 +20,16 @@
     public MemoryMemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
-        
-    // 생략
+
+    @Bean
+    public OrderService orderService() {
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
+    }
+
+    @Bean
+    public DiscountPolicy discountPolicy() {
+        return new RateDiscountPolicy();
+    }
    }
    ```
 ### 사용 코드 예시
@@ -63,3 +71,13 @@ public class MemberApp {
 * `AppConfig`를 활용한 java 코드만으로도 SRP, OCP, DIP를 만족할 수 있지만, 스프링은 이에 더해 싱글톤 패턴 등
   다양한 기능들이 있다.
 * 스프링 컨테이너 내부에서 생성된 `Bean` 객체는 모두 `Singleton` 패턴으로 관리되어진다.
+
+### AppConfig에서 의문점
+* memberService 빈을 만드는 코드를 보면 memberRepository() 를 호출 
+   * 이 메서드를 호출하면 new MemoryMemberRepository() 를 호출 
+* orderService 빈을 만드는 코드도 동일하게 memberRepository() 를 호출
+   * 이 메서드를 호출하면 new MemoryMemberRepository() 를 호출
+* 결과적으로 각각 다른 2개의 MemoryMemberRepository 가 생성되면서 싱글톤이 깨지는 것 처럼 보임
+* 하지만 실제로 싱글톤 패턴이 깨지지 않은다.
+   * `@Bean`이 붙은 메서드마다 이미 스프링 빈이 존재하면 존재하는 빈을 반환하고, 스프링 빈이 없으면 생성해서 스프링 빈으로 등록하고 반환하는 코드가 동적으로 만들어진다.
+   * 덕분에 싱글톤은 보장됨
