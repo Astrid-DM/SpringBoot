@@ -1,4 +1,4 @@
-![alt text](context1.png "context1")
+![image info](images/context2.png)
 ### BeanFactory
 * 스프링 컨테이너의 최상위 인터페이스
 * 스프링 빈을 관리하고 조회하는 역할을 담당
