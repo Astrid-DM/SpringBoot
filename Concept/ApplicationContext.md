@@ -1,4 +1,4 @@
-![image info](images/context1.png)
+<img width="60%" src="https://3513843782-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LxjHkZu4T9MzJ5fEMNe%2Fsync%2F21012b333f698d2d366ad35304db7e559cd641d9.png?generation=1618052456312074&alt=media"/></img>
 ### BeanFactory
 * 스프링 컨테이너의 최상위 인터페이스
 * 스프링 빈을 관리하고 조회하는 역할을 담당
@@ -9,7 +9,7 @@
 * BeanFactory 기능을 모두 상속받아서 제공
 * BeanFactory의 기능 외에 수많은 부가기능을 제공
 
-![image info](./images/context2.png)
+<img width="60%" src="https://3513843782-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LxjHkZu4T9MzJ5fEMNe%2Fsync%2Fad9b87e9ee7590f5f82a2bc0e554d33c87cd91b5.png?generation=1618052455370924&alt=media"/></img>
 * 메시지소스를 활용한 국제화 기능
     * 예를 들어서 한국에서 들어오면 한국어로, 영어권에서 들어오면 영어로 출력 
 * 환경변수
