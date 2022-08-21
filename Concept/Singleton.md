@@ -155,3 +155,37 @@ public class StatefulServiceTest {
 * 사용자A의 주문금액은 10000원이 되어야 하는데, 20000원이라는 결과가 나옴
 * 실무에서 이런 경우를 종종 보는데, 이로인해 정말 해결하기 어려운 큰 문제들이 터진다.(몇년에 한번씩 꼭 만난다.)
 * 때문에 공유필드는 조심해야 한다! 스프링 빈은 항상 무상태(stateless)로 설계해야한다.
+
+[변경 코드]
+``` java
+public class StatefulService {
+
+    // private int price; // 상태를 유지하는 필드 // 10000 -> 20000으로 저장해버린 원흉
+
+    public int order(String name, int price) { // 원래는 void였다
+        System.out.println("name = " + name + " price = " + price);
+        // this.price = price; //여기가 문제
+        return price;
+    }
+}
+```
+``` java
+    @Test
+    void statefulServiceSingleton() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(TestConfig.class);
+        StatefulService statefulService1 = ac.getBean("statefulService", StatefulService.class);
+        StatefulService statefulService2 = ac.getBean("statefulService", StatefulService.class);
+
+        //ThreadA: A사용자 10000원 주문
+        int userA = statefulService1.order("userA", 10000);
+        //ThreadB: B사용자 20000원 주문
+        int userB = statefulService2.order("userB", 20000);
+
+        //ThreadA: 20000원 정상 출력
+        System.out.println("price = " + userA);
+    }
+```
+``` shell
+price = 10000 // 결과 정상 출력
+```
+* `stateful`한 상태를 `stateless` 상태로 변경
