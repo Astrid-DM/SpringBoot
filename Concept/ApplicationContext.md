@@ -1,4 +1,4 @@
-<img width="60%" src="https://3513843782-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LxjHkZu4T9MzJ5fEMNe%2Fsync%2F21012b333f698d2d366ad35304db7e559cd641d9.png?generation=1618052456312074&alt=media"/></img>
+<img width="30%" src="https://3513843782-files.gitbook.io/~/files/v0/b/gitbook-legacy-files/o/assets%2F-LxjHkZu4T9MzJ5fEMNe%2Fsync%2F21012b333f698d2d366ad35304db7e559cd641d9.png?generation=1618052456312074&alt=media"/></img>
 ### BeanFactory
 * 스프링 컨테이너의 최상위 인터페이스
 * 스프링 빈을 관리하고 조회하는 역할을 담당
