@@ -51,7 +51,14 @@ public class AutoAppConfigTest {
 20:25:59.947 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memberServiceImpl'
 20:25:59.956 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memoryMemberRepository'
 ```
-
+*** 추가로, 모든 자바 클래스의 컴포넌트를 스캔할 경우 시간이 오래 걸림. 이를 위해 필요한 위치부터 탐색하도록 시작 위치를 지정할 수 있음
+``` java
+@ComponentScan(
+          basePackages = "hello.core", // basePackages = 탐색할 패키지의 시작 위치를 지정
+}
+```
+* 만약 basePackages로 시작 위치를 지정하지 않으면 `@ComponentScan`이 붙은 설정 정보 클래스의 패키지가 시작 위치가 됨
+* 때문에 설정 정보 클래스의 위치를 패키지 최상단에 두는 것을 권장
 
 ### 수동 빈 vs 자동 빈
 * `@Bean`을 통해 수동으로 빈을 등록하고, 동시에 `@Component`를 통해 자동으로 빈을 등록할 경우
