@@ -13,7 +13,7 @@
 }
 }
 ```
-* `@Autowired`는 의존 관계를 자동으로 주입해줌
+* `@Autowired`는 의존 관계를 자동으로 주입해줌   
 ![alt text](https://t1.daumcdn.net/cfile/tistory/21180341559E03A432)
 * `@Component`, `@Controller`, `@Service`, `@Repository` 등의 어노테이션에도 전부 `@Component`가 포함되어있어 자동으로 컴포넌스 스캔의 대상이 됨
 
