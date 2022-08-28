@@ -51,7 +51,7 @@ public class AutoAppConfigTest {
 20:25:59.947 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memberServiceImpl'
 20:25:59.956 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Creating shared instance of singleton bean 'memoryMemberRepository'
 ```
-*** 추가로, 모든 자바 클래스의 컴포넌트를 스캔할 경우 시간이 오래 걸림. 이를 위해 필요한 위치부터 탐색하도록 시작 위치를 지정할 수 있음
+* 추가로, 모든 자바 클래스의 컴포넌트를 스캔할 경우 시간이 오래 걸림. 이를 위해 필요한 위치부터 탐색하도록 시작 위치를 지정할 수 있음
 ``` java
 @ComponentScan(
           basePackages = "hello.core", // basePackages = 탐색할 패키지의 시작 위치를 지정
