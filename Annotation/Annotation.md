@@ -57,7 +57,7 @@ LocalDateTime currentDateTime = LocalDateTime.now();
 ```
 
 ### @NotNull
-- `Null`만 허용하지 않음
+- `null`만 허용하지 않음
 - "", " "(공백 띄어쓰기)는 허용
 - `CharSequence`에만 사용 가능 (ex : Enum, 특정 클래스 사용 가능)
 - `Collection`, `Map`, `Array`에도 적용 가능하나, `Empty`를 허용함
