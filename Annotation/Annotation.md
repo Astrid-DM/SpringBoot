@@ -57,7 +57,7 @@ LocalDateTime currentDateTime = LocalDateTime.now();
 ```
 
 ### @NotNull
-- `null`만 허용하지 않음
+- `Null`만 허용하지 않음
 - "", " "(공백 띄어쓰기)는 허용
 - `CharSequence`에만 사용 가능 (ex : Enum, 특정 클래스 사용 가능)
 - `Collection`, `Map`, `Array`에도 적용 가능하나, `Empty`를 허용함
@@ -132,26 +132,26 @@ ArgumentCaptor<Xxx> argumentCaptor = ArgumentCaptor.forClass(Xxx.class);
 ### HATEOAS
 - *Hypermedia As The Engine Of Application State*의 줄임말
 - 링크에 사용 가능한 URL을 리소스로 전달하여 client가 참고하여 사용할 수 있도록 함 (아래 *_links* 참고)
-  ```java
-  {
-    "customerId": "10A",
-    "customerName": "Jane",
-    "_links":{
-        "self":{
-            "href":"http://localhost:8080/spring-security-rest/api/customers/10A"
-            "rel" : "customers"
-            "type" : "GET"
-            }
-        }
-    }
-  ```
+```java
+{
+    "customerId": "10A",
+    "customerName": "Jane",
+    "_links":{
+         "self":{
+            "href":"http://localhost:8080/spring-security-rest/api/customers/10A"
+            "rel" : "customers"
+            "type" : "GET"
+            }
+        }
+    }
+```
 - URL을 정의하는 대표적인 형식으로는 아래 2가지가 존재
-     - *RFC 5988* (web linking)
-     - *__JSON Hypermedia API Language(HAL)__*
+     - *RFC 5988* (web linking)
+     - *__JSON Hypermedia API Language(HAL)__*
 - URL을 정의하는 속성으로는 아래 3가지가 존재
-     - `href` : 타겟 URL (해당 API를 호출하는데 사용되는 URL)
-     - `rel` : 링크 관계 (해당 API를 호출하여 궁극적으로 얻게되는 데이터)
-     - `type` : 리소스 미디어 타입 (ex : GET, POST, PUT, DELETE)
+     - `href` : 타겟 URL (해당 API를 호출하는데 사용되는 URL)
+     - `rel` : 링크 관계 (해당 API를 호출하여 궁극적으로 얻게되는 데이터)
+     - `type` : 리소스 미디어 타입 (ex : GET, POST, PUT, DELETE)
 
 ### HAL (HyperText Application Language)
 * API 리소스 사이에 하이퍼링크를 쉽게 제공하기 위한 방법
@@ -160,37 +160,37 @@ ArgumentCaptor<Xxx> argumentCaptor = ArgumentCaptor.forClass(Xxx.class);
 __[General Resource]__
 ``` json
 {
-  "_links": {
-    "self": {
-      "href": "http://example.com/api/book/hal-cookbook"
-    }
-  },
-  "id": "hal-cookbook",
-  "name": "HAL Cookbook"
+  "_links": {
+    "self": {
+      "href": "http://example.com/api/book/hal-cookbook"
+    }
+  },
+  "id": "hal-cookbook",
+  "name": "HAL Cookbook"
 }
 ```
 __[Embedded Resource]__
 ``` json
 {
-  "_links": {
-    "self": {
-      "href": "http://example.com/api/book/hal-cookbook"
-    }
-  },
-  "_embedded": {
-    "author": {
-      "_links": {
-        "self": {
-          "href": "http://example.com/api/author/shahadat"
-        }
-      },
-      "id": "shahadat",
-      "name": "Shahadat Hossain Khan",
-      "homepage": "http://author-example.com"
-    }
-  },
-  "id": "hal-cookbook",
-  "name": "HAL Cookbook"
+  "_links": {
+    "self": {
+       "href": "http://example.com/api/book/hal-cookbook"
+    }
+  },
+  "_embedded": {
+    "author": {
+      "_links": {
+        "self": {
+          "href": "http://example.com/api/author/shahadat"
+       }
+      },
+      "id": "shahadat",
+      "name": "Shahadat Hossain Khan",
+      "homepage": "http://author-example.com"
+    }
+  },
+  "id": "hal-cookbook",
+  "name": "HAL Cookbook"
 }
 ```
 __[Collections]__
@@ -230,19 +230,19 @@ __[Collections]__
 }
 ```
 * 보통 ***Resources***와 ***Links***의 컨셉을 가짐
-    * Resources
-        * Links (to URLs)
-        * Embedded Resources
-        * State (정제되지 않은 JSON 또는 XML 데이터)
-    * Links
-        * href (a URL)
-        * rel (링크의 관계)
-        * type (리소스 미디어 타입 ex :GET, PUT)
+    * Resources
+        * Links (to URLs)
+        * Embedded Resources
+        * State (정제되지 않은 JSON 또는 XML 데이터)
+    * Links
+        * href (a URL)
+        * rel (링크의 관계)
+        * type (리소스 미디어 타입 ex :GET, PUT)
 * HAL은 `application/hal+json`, `application/hal+xml`이라는 이름의 JSON, XML 미디어 타입을 가짐
 * HTTP에 요청할 때, 응답 `Content-Type`은 관련된 미디어 타입을 포함해야함
 * 최소한 `JSON` 객체와 `_links.self` URL은 가져야 함
 
 ### HATEOAS <-> HAL
 * `HATEOAS`는 ***Application Architecture***의 한 개념
-    * ***hypemedia*** 링크를 제공함으로써 클라이언트가 서버와 소통할 수 있게 제공함
+    * ***hypemedia*** 링크를 제공함으로써 클라이언트가 서버와 소통할 수 있게 제공함
 * `HAL`은 `HATEOAS`를 어떻게 제공할 것인가에 대한 방법 중 하나
