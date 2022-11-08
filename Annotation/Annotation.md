@@ -81,7 +81,7 @@ LocalDateTime currentDateTime = LocalDateTime.now();
 ```java
 public class TestApiDto {
 
-@Getter
+    @Getter
     @Builder
     @NoArgsConstructor(access = AccessLevel.PRIVATE)
     @AllArgsConstructor
